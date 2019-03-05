@@ -9,13 +9,13 @@ int main()
 {
     int f = 1;
     int fprev = 0;
-    double ratio = 0;
-    std::setprecision(17);
+    double ratio = 1;
+    double const dev_template = 1.61803399;
 
     std :: cout << fprev << std :: endl ;
 
      do {
-     std :: cout << f << "\t\t Ratio: " << std::fixed << ratio << std :: endl ;
+     std :: cout << f << "\t\t Ratio: " << std::fixed << std::setprecision(17) << ratio << " - Dev[%]: " << ( ratio - dev_template ) / dev_template * -100 << std :: endl ;
      int tmp = fibonacci (f, fprev );
      ratio = goldenRatio(f, fprev);
      fprev = f;
