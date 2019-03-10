@@ -51,3 +51,44 @@
 	1836311903		 Ratio: 1.61803398874989490 - Dev[%]: 0.00000007726074596
 
 	Max int value: 2147483647
+	
+## Output Ex02 ##
+
+	///////////////////////////////////////////////////////////////
+	///               BME - C++ I - EXERCISE 2                  ///
+	///////////////////////////////////////////////////////////////
+
+	***************************************************************
+	***                       FUNCTIONS                         ***
+	***************************************************************
+	Pass-by-Value & Pass-by-Reference output: 70
+	Default Values output:
+	Call: addNumbers(1, 2, 3, 4);    Output: 10
+	Call: addNumbers(1, 2, 3);       Output: 6
+	Call: addNumbers(1, 2);          Output: 3
+	Call: addNumbers(1);             Output: 1
+	Call: addNumbers();              Output: 0
+	Function Overloading output:
+	The passed number of type int has the value 42
+	The passed number of type float has the value 1.666
+
+	***************************************************************
+	***            Train your Skills - Calculate Pi             ***
+	***************************************************************
+	Setup Random Number Generator output:
+	0.326433
+	0.530056
+	0.338599
+	0.43006
+	0.821407
+	0.175588
+	0.157397
+	0.211704
+	0.895904
+	0.867692
+	Throwing a Dart output:
+	Single throw with (x,y) with values (0.18065,0.764861) was successful
+	Throw many Darts output:
+	Start to throw 5000000 darts
+	Successful throws: 3925549
+	Result: 3.14043919999999988
