@@ -20,6 +20,10 @@ void ex2_functions()
     printType(intNumber); // −> Type is int
     float floatNumber = 1.666f;
     printType(floatNumber); // −> Type is float
+    double doubleNumber = 1.99;
+    printType(doubleNumber); // −> Type is double
+    std::string stringValue = "asdf";
+    printType(stringValue); // −> Type is string
 }
 
 void doubleNumber(int& num)
@@ -32,12 +36,22 @@ int addNumbers(int num1, int num2, int num3, int num4)
     return num1 + num2 + num3 + num4;
 }
 
-void printType(int num)
+void printType(int var)
 {
-    std::cout << "The passed number of type int has the value " << num << std::endl;
+    std::cout << "The passed variable of type int has the value " << var << std::endl;
 }
 
-void printType(float num)
+void printType(float var)
 {
-    std::cout << "The passed number of type float has the value " << num << std::endl;
+    std::cout << "The passed variable of type float has the value " << var << std::endl;
+}
+
+void printType(double var)
+{
+    std::cout << "The passed variable of type double has the value " << var << std::endl;
+}
+
+void printType(string var)
+{
+    std::cout << "The passed variable of type string has the value " << var << std::endl;
 }

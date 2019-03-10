@@ -69,26 +69,28 @@
 	Call: addNumbers(1);             Output: 1
 	Call: addNumbers();              Output: 0
 	Function Overloading output:
-	The passed number of type int has the value 42
-	The passed number of type float has the value 1.666
+	The passed variable of type int has the value 42
+	The passed variable of type float has the value 1.666
+	The passed variable of type double has the value 1.99
+	The passed variable of type string has the value asdf
 
 	***************************************************************
 	***            Train your Skills - Calculate Pi             ***
 	***************************************************************
 	Setup Random Number Generator output:
-	0.326433
-	0.530056
-	0.338599
-	0.43006
-	0.821407
-	0.175588
-	0.157397
-	0.211704
-	0.895904
-	0.867692
+	0.726249
+	0.915339
+	0.594324
+	0.515358
+	0.975149
+	0.661561
+	0.528652
+	0.788493
+	0.0741007
+	0.32985
 	Throwing a Dart output:
-	Single throw with (x,y) with values (0.18065,0.764861) was successful
+	Single throw with (x,y) with values (0.583744,0.0309722) was successful
 	Throw many Darts output:
 	Start to throw 5000000 darts
-	Successful throws: 3925549
-	Result: 3.14043919999999988
+	Successful throws: 3927337
+	Result: 3.14186960000000015
