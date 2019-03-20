@@ -15,15 +15,15 @@ void ex3_2()
 int ex3_2_a()
 {
 //    Original
-//    int * pointToAnInt = new int ;
+//    int *pointToAnInt = new int ;
 //    pointToAnInt = 9;
 //    std::cout << " The value at pointToAnInt : " << * pointToAnInt ;
 //    delete pointToAnInt ;
 //    return 0;
-    int *pointToAnInt = new int ;
+    int *pointToAnInt = new int;
     *pointToAnInt = 9; //need to dereference
-    std::cout << " The value at pointToAnInt : " << * pointToAnInt ;
-    delete pointToAnInt ;
+    std::cout << " The value at pointToAnInt : " << *pointToAnInt ;
+    delete pointToAnInt;
     return 0;
 
 }
@@ -38,11 +38,11 @@ int ex3_2_b()
 //    delete pointToAnInt ;
 //    return 0;
     int *pointToAnInt = new int; //new returning a pointer
-    int *pNumberCopy = pointToAnInt ;
+    int *pNumberCopy = pointToAnInt;
     *pNumberCopy = 30;
     std::cout << *pointToAnInt;
-    delete pNumberCopy ;
-    delete pointToAnInt ;
+    delete pNumberCopy;
+    delete pointToAnInt;
     return 0;
 }
 int* ex3_2_c(const int length)

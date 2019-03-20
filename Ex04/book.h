@@ -9,10 +9,7 @@ class Book
 private:
     std::string m_title, m_author, m_isbn;
 public:
-    Book(std::string title, std::string author, std::string isbn) : m_title(title), m_author(author), m_isbn(isbn)
-    {
-
-    }
+    Book(std::string title, std::string author, std::string isbn) : m_title(title), m_author(author), m_isbn(isbn) { }
     bool isValid();
     friend ostream& operator<<(ostream& os, const Book& book);
 };

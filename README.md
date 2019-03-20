@@ -119,3 +119,31 @@
 	30
 
 	0 1 2 3 4
+
+## Output Ex04 ##
+	///////////////////////////////////////////////////////////////
+	///               BME - C++ I - EXERCISE 4                  ///
+	///////////////////////////////////////////////////////////////
+
+	Add: Book(title="Sams Teach Yourself C++", author="Siddharta Rao", isbn="0-7897-5774-5")
+	Add: Book(title="C++ Primer", author="Stanley B. Lippman", isbn="0321714113")
+	Add: Book(title="The C++ Programming Language", author="Bjarne Stroustrup", isbn="0321563840")
+	Add: Book(title="Programming Python", author="Mark Lutz", isbn="0-596-15810-2")
+	Add: Book(title="TIBITS AT HOME", author="Betty Bossy", isbn="1-234-567-8")
+	Add: Book(title="Thinking in Java", author="", isbn="9780596009205")
+	Add: Book(title="Multiple View Geometry in Computer Vision", author="", isbn="1139449141")
+	Add: Book(title="", author="Paul Kimmel", isbn="0-321-99278-4")
+	Inventory:
+	Book(title="Sams Teach Yourself C++", author="Siddharta Rao", isbn="0-7897-5774-5")
+	Book(title="C++ Primer", author="Stanley B. Lippman", isbn="0321714113")
+	Book(title="The C++ Programming Language", author="Bjarne Stroustrup", isbn="0321563840")
+	Book(title="Programming Python", author="Mark Lutz", isbn="0-596-15810-2")
+	Book(title="TIBITS AT HOME", author="Betty Bossy", isbn="1-234-567-8")
+	Book(title="Thinking in Java", author="", isbn="9780596009205")
+	Book(title="Multiple View Geometry in Computer Vision", author="", isbn="1139449141")
+	Book(title="", author="Paul Kimmel", isbn="0-321-99278-4")
+	cleanup Inventory
+	Inventory:
+	Book(title="C++ Primer", author="Stanley B. Lippman", isbn="0321714113")
+	Book(title="The C++ Programming Language", author="Bjarne Stroustrup", isbn="0321563840")
+	Book(title="Multiple View Geometry in Computer Vision", author="", isbn="1139449141")
