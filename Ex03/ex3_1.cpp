@@ -1,8 +1,8 @@
 #include <iostream>
 #include <memory>
-#include "ex2_1.h"
+#include "ex3_1.h"
 
-void ex2_1()
+void ex3_1()
 {
     unsigned long arraySize{0};
     std::cout << "How many values do you want to enter?: ";
@@ -22,7 +22,7 @@ void ex2_1()
         min = min > smartPtr[i] ? smartPtr[i] : min;
         max = max < smartPtr[i] ? smartPtr[i] : max;
     }
-    std::cout << "Results:" << std::endl;
+    std::cout << std::endl << "Results:" << std::endl;
     std::cout << "Sum: \t" << sum << std::endl;
     std::cout << "Min: \t" << min << std::endl;
     std::cout << "Max: \t" << max << std::endl;

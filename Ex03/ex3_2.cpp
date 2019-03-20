@@ -1,18 +1,18 @@
 #include <iostream>
-#include "ex2_2.h"
+#include "ex3_2.h"
 
-void ex2_2()
+void ex3_2()
 {
-    ex2_2_a();
+    ex3_2_a();
     std::cout << std::endl;
-    ex2_2_b();
+    ex3_2_b();
     std::cout << std::endl;
-    ex2_2_c(168);
+    ex3_2_c(168);
     std::cout << std::endl;
-    ex2_2_d();
+    ex3_2_d();
     std::cout << std::endl;
 }
-int ex2_2_a()
+int ex3_2_a()
 {
 //    Original
 //    int * pointToAnInt = new int ;
@@ -27,7 +27,7 @@ int ex2_2_a()
     return 0;
 
 }
-int ex2_2_b()
+int ex3_2_b()
 {
 //    Original
 //    int pointToAnInt = new int;
@@ -45,7 +45,7 @@ int ex2_2_b()
     delete pointToAnInt ;
     return 0;
 }
-int* ex2_2_c(const int length)
+int* ex3_2_c(const int length)
 {
 //    Original
 //    int temp [length];
@@ -53,7 +53,7 @@ int* ex2_2_c(const int length)
     int* temp = new int[static_cast<unsigned long>(length)]; //need to be a pointer to an array, would be unaccessible if the scope is closed.
     return temp;
 }
-int ex2_2_d()
+int ex3_2_d()
 {
 //    Original
 //    int array [5] { 0, 1, 2, 3 };
