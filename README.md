@@ -105,19 +105,44 @@
 	***            Allocating and Freeing Memory                ***
 	***************************************************************
 	How many values do you want to enter?: 2
-	0.      value: 5
-	1.      value: 6
+	--------------------------'unsafe'-arrays----------------------
+	0.      value: 2
+	1.      value: 3
+	//with index access
 	Results:
-	Sum:    11
-	Min:    5
-	Max:    6
+	Sum:    5
+	Min:    2
+	Max:    3
+	//with pointer arithmetic
+	Results:
+	Sum:    5
+	Min:    2
+	Max:    3
+	---------------------------smart-pointer-----------------------
+	0.      value: 2
+	1.      value: 3
+	Results:
+	Sum:    5
+	Min:    2
+	Max:    3
+	---------------------------STL-container-----------------------
+	0.      value: 2
+	1.      value: 3
+	Results:
+	Sum:    5
+	Min:    2
+	Max:    3
 
 	***************************************************************
 	***                       Pitfalls                          ***
 	***************************************************************
+	----------------------What’s wrong here?-----------------------
 	 The value at pointToAnInt : 9
+	-------------Why and where does the program crash?-------------
 	30
+	-----------------------Fix the function!-----------------------
 
+	---------------------------Hoppla!-----------------------------
 	0 1 2 3 4
 
 ## Output Ex04 ##

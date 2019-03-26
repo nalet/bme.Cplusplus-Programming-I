@@ -3,12 +3,16 @@
 
 void ex3_2()
 {
+    std::cout << "----------------------What’s wrong here?-----------------------" << std::endl;
     ex3_2_a();
     std::cout << std::endl;
+    std::cout << "-------------Why and where does the program crash?-------------" << std::endl;
     ex3_2_b();
     std::cout << std::endl;
+    std::cout << "-----------------------Fix the function!-----------------------" << std::endl;
     ex3_2_c(168);
     std::cout << std::endl;
+    std::cout << "---------------------------Hoppla!-----------------------------" << std::endl;
     ex3_2_d();
     std::cout << std::endl;
 }

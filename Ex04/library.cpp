@@ -24,8 +24,13 @@ void Library::cleanup()
     for (auto it = begin(this->lib); it != end(this->lib);)
     {
         if (!it->isValid())
+        {
+            std::cout << "Removing: " << static_cast<Book>(*it) << std::endl;
             it = this->lib.erase(it);
+        }
         else
+        {
             ++it;
+        }
     }
 }
