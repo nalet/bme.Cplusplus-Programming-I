@@ -32,13 +32,13 @@ int main()
     lib.addBook(book8);
 
     // Give an overview
-    lib.printInventary();
+    lib.printInventory();
 
     // Clean non-valid book
     lib.cleanup();
 
     // Overview again
-    lib.printInventary();
+    lib.printInventory();
 
     // Now only C++ books are left in the library
     return 0;
