@@ -1,8 +1,6 @@
 #include <iostream>
 #include "vector.h"
 
-using namespace std;
-
 Vector::Vector()
 {
     m_data = new int[0];
@@ -58,7 +56,7 @@ Vector::Vector(Vector&& move)
 
 Vector::~Vector()
 {
-    delete [] m_data;
+    delete m_data;
     this->m_size = 0;
 }
 
@@ -70,8 +68,8 @@ int Vector::at(int idx)
     }
     else
     {
-        std::cout << "Index out of range " << std::endl;
-        return 0;
+        std::cout << "Out of bounds " << std::endl;
+        return -1;
     }
 }
 
@@ -84,7 +82,7 @@ void Vector::push_back(int addEle)
     }
 
     tmp[this->m_size] = addEle;
-    delete [] m_data;
+    delete m_data;
     m_data = tmp;
     this->m_size = this->m_size + 1;
     tmp = nullptr;
@@ -99,14 +97,14 @@ void Vector::pop_back()
         tmp[i] = m_data[i];
     }
 
-    delete [] m_data;
+    delete m_data;
     m_data = tmp;
     tmp = nullptr;
 }
 
 void Vector::clear()
 {
-    delete [] m_data;
+    delete m_data;
     m_data = nullptr;
     this->m_size = 0;
 }

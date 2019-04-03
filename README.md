@@ -177,3 +177,49 @@
 	Book(title="Sams Teach Yourself C++", author="Siddharta Rao", isbn="0-7897-5774-5", validityStatus="1")
 	Book(title="C++ Primer", author="Stanley B. Lippman", isbn="0321714113", validityStatus="1")
 	Book(title="The C++ Programming Language", author="Bjarne Stroustrup", isbn="0321563840", validityStatus="1")
+	
+## Output Ex05 ##
+	*****************************
+	******** VECTOR TEST ********
+	*****************************
+
+	v1 has size 0
+	v2 has size 100
+	v3 has size 100
+
+	v1 contains value: Out of bounds
+	-1
+	v2 contains value: 0
+	v3 contains value: 42
+
+	v3 contains value: Out of bounds
+	-1
+
+
+	v1 has size 5 and containes:
+	0: 1
+	1: 2
+	2: 3
+	3: 4
+	4: 5
+
+	v1 has size 3 and containes:
+	0: 1
+	1: 2
+	2: 3
+
+
+	v1 has size 0
+	vCopy has size 100
+
+	vCopy contains value: 42
+
+	vMove has size 100
+
+	vMove contains value: 42
+
+	v3 has size 0
+
+	*****************************
+	**** VECTOR TEST PASSED *****
+	*****************************
