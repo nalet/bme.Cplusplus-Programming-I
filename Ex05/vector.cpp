@@ -26,9 +26,9 @@ Vector::Vector(int l, int value)
 Vector::Vector(const Vector& copy)
 {
     if(copy.m_data == nullptr) return;
-    m_data = nullptr;
+    this->m_data = nullptr;
 
-    m_data = new int[static_cast<unsigned long>(copy.m_size)];
+    this->m_data = new int[static_cast<unsigned long>(copy.m_size)];
     this->m_size = copy.m_size;
     for(int i = 0; i < this->m_size; i++) m_data[i] = copy.m_data[i];
 }
@@ -59,7 +59,7 @@ int Vector::at(int idx)
 
 void Vector::push_back(int addEle)
 {
-    int* tmp = new int [static_cast<unsigned long>(this->m_size)];
+    int* tmp = new int [static_cast<unsigned long>(this->m_size+1)];
     for(int i = 0; i < this->m_size; i++) tmp[i] = m_data[i];
 
     tmp[this->m_size] = addEle;
@@ -70,7 +70,7 @@ void Vector::push_back(int addEle)
 
 void Vector::pop_back()
 {
-    this->m_size = this->m_size - 1;
+    this->m_size--;
     int* tmp = new int[static_cast<unsigned long>(this->m_size)];
     for(int i = 0; i < this->m_size; i++) tmp[i] = m_data[i];
 
