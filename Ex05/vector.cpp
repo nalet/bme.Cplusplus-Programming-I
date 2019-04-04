@@ -71,7 +71,7 @@ void Vector::push_back(int addEle)
 void Vector::pop_back()
 {
     this->m_size = this->m_size - 1;
-    int* tmp =  new int[static_cast<unsigned long>(this->m_size)];
+    int* tmp = new int[static_cast<unsigned long>(this->m_size)];
     for(int i = 0; i < this->m_size; i++) tmp[i] = m_data[i];
 
     delete[] m_data;
