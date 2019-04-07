@@ -219,7 +219,154 @@
 	vMove contains value: 42
 
 	v3 has size 0
-
+	
+## Output Ex06 ##
 	*****************************
 	**** VECTOR TEST PASSED *****
 	*****************************
+	
+	///////////////////////////////////////////////////////////////
+	///               BME - C++ I - EXERCISE 6                  ///
+	///////////////////////////////////////////////////////////////
+
+	***************************************************************
+	***                       2.1 - ATM                         ***
+	***************************************************************
+	Initial amount(1000) and fee(0.5)
+	Current Balance: 1250
+	Current Balance: 249.5
+	Warning: Not enough funds
+	Current Balance: 0
+
+	***************************************************************
+	***                  2.2 - Code Snippets                    ***
+	***************************************************************
+	For each of the following programs, determine what they output,
+	or if they would not compile, indicate why.
+	-------------------------------a)------------------------------
+	#include <iostream>
+
+	class Base {
+	public:
+		Base()
+		{
+			std::cout << " Base ()\n";
+		}
+		~Base()
+		{
+			std::cout << "~ Base ()\n";
+		}
+	};
+
+	class Derived : public Base {
+	public:
+		Derived()
+		{
+			std::cout << " Derived ()\n";
+		}
+		~Derived()
+		{
+			std::cout << "~ Derived ()\n";
+		}
+	};
+
+	int main()
+	{
+		Derived d;
+		Base b;
+	}
+	---------------------------------------------------------------
+	Answer: The programm compiles correctly, the output is:
+			Base (), Derived (), Base (),~ Base (),~ Derived (),
+			~ Base ()
+	-------------------------------b)------------------------------
+	#include <iostream >
+
+	class Base {
+	private:
+		int m_x;
+
+	public:
+		Base(int x)
+			: m_x(x)
+		{
+			std::cout << " Base ()\n";
+		}
+		~Base()
+		{
+			std::cout << "~ Base ()\n";
+		}
+
+		void print() { std::cout << " Base : " << m_x << "\n"; }
+	};
+
+	class Derived : public Base {
+	public:
+		Derived(int y)
+			: Base(y)
+		{
+			std::cout << " Derived ()\n";
+		}
+		~Derived()
+		{
+			std::cout << "~ Derived ()\n";
+		}
+
+		void print() { std::cout << " Derived : " << m_x << "\n"; }
+	};
+
+	int main()
+	{
+		Derived d(5);
+		d.print();
+	}
+	---------------------------------------------------------------
+	Answer: The programm would not compile, because the member m_x
+			is private. When the member m_x in base would change to
+			protected, the output would be: Base (); Derived ()
+			Derived : 5, ~ Derived (), ~ Base ()
+
+	***************************************************************
+	***          2.3 - Order of Construction & Destruction      ***
+	***************************************************************
+	What’s the general rule for the order of construction and
+	destruction?
+	Base constructor, Derived constructor, Derived destructor
+	Base destructor
+	---------------------------------------------------------------
+	create ABC in stack
+	A()
+	C()
+	B()
+	ABC()
+	create ABC in heap
+	A()
+	C()
+	B()
+	ABC()
+	delete ABC in heap
+	~ABC()
+	~B()
+	~C()
+	~A()
+	leave test()
+	~ABC()
+	~B()
+	~C()
+	~A()
+
+	***************************************************************
+	***                2.4 - Access Specifiers                  ***
+	***************************************************************
+	There are two solutions - which one is preferable and why
+	Access Levels and Scope. With Scope set to private, one can
+	access a class more granular, using public access methods.
+	---------------------------------------------------------------
+	create C
+	A()
+	B()
+	C()
+	leave test()
+	~C()
+	~B()
+	~A()
