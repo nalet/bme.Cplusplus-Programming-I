@@ -9,7 +9,7 @@ Circle::~Circle()
 
 double Circle::getArea()
 {
-    return this->d1*M_PI*M_PI;
+    return this->d1*this->d1*M_PI;
 }
 
 double Circle::getCircumference()
