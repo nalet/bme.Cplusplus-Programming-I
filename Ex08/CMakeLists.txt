@@ -9,6 +9,7 @@ set(CMAKE_BUILD_TYPE "Debug")
 
 # Create executable using the specified source files
 add_executable(${PROJECT_NAME}
+    stack.h
     main.cpp
 )
 

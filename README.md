@@ -403,3 +403,83 @@
 	Shape destructor called
 	Triangle destructor called
 	Shape destructor called
+
+## Output Ex8 ##
+	///////////////////////////////////////////////////////////////
+	///               BME - C++ I - EXERCISE 8                  ///
+	///////////////////////////////////////////////////////////////
+
+	-----------------------stack string test-----------------------
+	Add to stack: ABC
+	Add to stack: BCD
+	Add to stack: CDE
+	Add to stack: DEF
+	Add to stack: EFG
+	Add to stack: FGH
+	Add to stack: GHI
+	Add to stack: HIJ
+	Add to stack: IJK
+	Add to stack: JKL
+	Peek from stack: JKL
+	Pop from stack: JKL
+	Peek from stack: IJK
+	Stack on Pos 0: ABC
+	Stack on Pos 1: BCD
+	Stack on Pos 2: CDE
+	Stack on Pos 3: DEF
+	Stack on Pos 4: EFG
+	Stack on Pos 5: FGH
+	Stack on Pos 6: GHI
+	Stack on Pos 7: HIJ
+	Stack on Pos 8: IJK
+	Stack on Pos 9:
+
+	------------------------stack int test--------------------------
+	Add to stack: 0
+	Add to stack: 1
+	Add to stack: 2
+	Add to stack: 3
+	Add to stack: 4
+	Add to stack: 5
+	Add to stack: 6
+	Add to stack: 7
+	Add to stack: 8
+	Add to stack: 9
+	Peek from stack: 9
+	Pop from stack: 9
+	Peek from stack: 8
+	Stack on Pos 0: 0
+	Stack on Pos 1: 1
+	Stack on Pos 2: 2
+	Stack on Pos 3: 3
+	Stack on Pos 4: 4
+	Stack on Pos 5: 5
+	Stack on Pos 6: 6
+	Stack on Pos 7: 7
+	Stack on Pos 8: 8
+	Stack on Pos 9: 0
+
+	------------------------stack double test-----------------------
+	Add to stack: 0
+	Add to stack: 1
+	Add to stack: 2
+	Add to stack: 3
+	Add to stack: 4
+	Add to stack: 5
+	Add to stack: 6
+	Add to stack: 7
+	Add to stack: 8
+	Add to stack: 9
+	Peek from stack: 9
+	Pop from stack: 9
+	Peek from stack: 8
+	Stack on Pos 0: 0
+	Stack on Pos 1: 1
+	Stack on Pos 2: 2
+	Stack on Pos 3: 3
+	Stack on Pos 4: 4
+	Stack on Pos 5: 5
+	Stack on Pos 6: 6
+	Stack on Pos 7: 7
+	Stack on Pos 8: 8
+	Stack on Pos 9: 0
