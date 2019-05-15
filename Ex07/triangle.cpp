@@ -14,5 +14,5 @@ double Triangle::getArea()
 
 double Triangle::getCircumference()
 {
-    return 2 *  std::sqrt(std::pow(this->d1/2,2) + std::pow(this->d2,2)) + this->d1;
+    return 2 *  std::sqrt(std::pow(this->d1/2.0,2) + std::pow(this->d2,2)) + static_cast<double>(this->d1);
 }

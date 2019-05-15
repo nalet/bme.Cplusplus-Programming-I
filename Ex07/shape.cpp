@@ -8,6 +8,6 @@ Shape::~Shape()
 
 void Shape::report()
 {
-    std::cout << this->type << "has area: " << this->getArea();
-    std::cout << "and circumference: " << this->getCircumference();
+    std::cout << this->type << " has area: " << this->getArea();
+    std::cout << " and circumference: " << this->getCircumference() << std::endl;
 }

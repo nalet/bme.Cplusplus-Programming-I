@@ -3,7 +3,6 @@
 #include "triangle.h"
 #include "square.h"
 #include "circle.h"
-#include "shape.h"
 
 int main()
 {

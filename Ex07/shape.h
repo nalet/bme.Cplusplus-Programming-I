@@ -11,9 +11,9 @@ private:
 public:
     Shape(std::string type) : type(type) {}
     virtual ~Shape();
-    virtual double getArea();
-    virtual double getCircumference();
-    virtual void report();
+    virtual double getArea() = 0;
+    virtual double getCircumference() = 0;
+    void report();
 };
 
 #endif // SHAPE_H

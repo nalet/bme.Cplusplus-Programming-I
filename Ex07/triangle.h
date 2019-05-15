@@ -4,7 +4,7 @@
 #define TRIANGLE_H
 
 
-class Triangle : public Shape
+class Triangle final : public Shape
 {
 private:
     int d1,d2;
