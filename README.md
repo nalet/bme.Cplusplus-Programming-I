@@ -379,12 +379,12 @@
 	Triangle has area: 1 and circumference: 5.12311
 	Triangle has area: 6 and circumference: 11.544
 	Triangle has area: 15 and circumference: 18
-	Triangle has area: 1 and circumference: 4
-	Triangle has area: 4 and circumference: 8
-	Triangle has area: 9 and circumference: 12
-	Triangle has area: 9.8696 and circumference: 6.28319
-	Triangle has area: 19.7392 and circumference: 12.5664
-	Triangle has area: 29.6088 and circumference: 18.8496
+	Square has area: 1 and circumference: 4
+	Square has area: 4 and circumference: 8
+	Square has area: 9 and circumference: 12
+	Circle has area: 9.8696 and circumference: 6.28319
+	Circle has area: 19.7392 and circumference: 12.5664
+	Circle has area: 29.6088 and circumference: 18.8496
 	Circle destructor called
 	Shape destructor called
 	Circle destructor called
