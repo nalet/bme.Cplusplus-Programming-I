@@ -56,21 +56,16 @@ public:
     T1 operator= (SharedPtr &copy_ptr)
     {
         mPtr = new T1;
+        if (mPtr == nullptr)
+        {
+            std::cout << "Pointer is empty."<<std::endl;
+            return *this->mPtr;
+        }
+        mPtr = copy_ptr.mPtr;
+        copy_ptr.mRefCnt++;
+        mRefCnt = copy_ptr.mRefCnt;
 
-                if (mPtr != nullptr)
-                {
-                    mPtr = copy_ptr.mPtr;
-
-                    // use count mechanism
-                    copy_ptr.mRefCnt++;
-                    mRefCnt = copy_ptr.mRefCnt;
-                }
-                else
-                {
-                   std::cout<<"Sorry, no move today..."<<std::endl;
-                }
-
-             return *this->mPtr;
+        return *this->mPtr;
     }
 
     int useCount()
@@ -137,21 +132,16 @@ public:
     T1 operator= (SharedPtr &copy_ptr)
     {
         mPtr = new T1;
+        if (mPtr == nullptr)
+        {
+            std::cout << "Pointer is empty."<<std::endl;
+            return *this->mPtr;
+        }
+        mPtr = copy_ptr.mPtr;
+        copy_ptr.mRefCnt++;
+        mRefCnt = copy_ptr.mRefCnt;
 
-                if (mPtr != nullptr)
-                {
-                    mPtr = copy_ptr.mPtr;
-
-                    // use count mechanism
-                    copy_ptr.mRefCnt++;
-                    mRefCnt = copy_ptr.mRefCnt;
-                }
-                else
-                {
-                   std::cout<<"Sorry, no move today..."<<std::endl;
-                }
-
-             return *this->mPtr;
+        return *this->mPtr;
     }
 
     int useCount()
