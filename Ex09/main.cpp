@@ -10,50 +10,126 @@ UniquePtr<double> checkMove(UniquePtr<double> UP)
     return UP;
 }
 
+UniquePtr<double[]> checkMove(UniquePtr<double[]> UP)
+{
+    *UP += 1;
+    return UP;
+}
+
 int main()
 {
-    cout << "*** Test Unique Pointer ***" << endl << endl;
-    UniquePtr<double> up1(new double(3.1415));
-    cout << "Value of up1: " << *up1 << endl << endl;
+    std::cout << "///////////////////////////////////////////////////////////////" << std::endl;
+    std::cout << "///               BME - C++ I - EXERCISE 9                  ///" << std::endl;
+    std::cout << "///////////////////////////////////////////////////////////////" << std::endl;
+    std::cout << std::endl;
+    std::cout << "-------------------------with variables------------------------" << std::endl;
+    {
+        std::cout << "*** Test Unique Pointer ***" << endl << endl;
+        UniquePtr<double> up1(new double(3.1415));
+        std::cout << "Value of up1: " << *up1 << endl << endl;
 
-    {   // Create scope to check move-assign
-        UniquePtr<double> up2(new double(23));
-        cout << "Value of up2: " << *up2 << endl << endl;
-        up1 = std::move(up2);
+        {   // Create scope to check move-assign
+            UniquePtr<double> up2(new double(23));
+            std::cout << "Value of up2: " << *up2 << endl << endl;
+            up1 = std::move(up2);
+        }
+        std::cout << "Value of up1 after move: " << *up1 << endl << endl;
+        UniquePtr<double> up2 = checkMove(std::move(up1));
+        std::cout << "Value of up1 after check move: " << *up2 << endl << endl;
+
+
+        std::cout << "*** Test SharedPointer ***" << endl << endl;
+
+        SharedPtr<int> sp1;
+        std::cout << "UseCount of sp1: " << sp1.useCount() << endl << endl;
+
+        SharedPtr<int> sp2(new int(42));
+        std::cout << "UseCount of sp2: " << sp2.useCount() << endl;
+        std::cout << "Value of sp2 is: " << *sp2 << endl << endl;
+
+        {  // Create scope to check copy constructor
+            SharedPtr<int> sp3(sp2);
+            std::cout << "UseCount after copy: sp2: " << sp2.useCount() << " sp3: " << sp3.useCount() << endl;
+            std::cout << "Values after copy: sp2: " << *sp2 << " sp3: " << *sp3 << endl << endl;
+
+        }
+        std::cout << "UseCount of sp2: " << sp2.useCount() << endl << endl;
+
+        {   // Create scope to check assignment operator call
+            sp1 = sp2;
+            std::cout << "UseCount after copy assign: sp2: " << sp2.useCount() << " sp1: " << sp1.useCount() << endl;
+            std::cout << "Values after copy assign: sp2: " << *sp2 << " sp1: " << *sp1 << endl << endl;
+        }
+
+        sp1.reset();
+        sp2.reset();
+        std::cout << "UseCount of sp1: " << sp2.useCount() << endl;
+        std::cout << "UseCount of sp2: " << sp2.useCount() << endl;
     }
-    cout << "Value of up1 after move: " << *up1 << endl << endl;
-    UniquePtr<double> up2 = checkMove(std::move(up1));
-    cout << "Value of up1 after check move: " << *up2 << endl << endl;
+    std::cout << "-------------------------with arrays---------------------------" << std::endl;
+    {
+        std::cout << "*** Test Unique Pointer ***" << endl << endl;
+        UniquePtr<double[]> up1(new double[10]);
+        for (unsigned long i = 0;i < 10; i++) *(up1.operator->()+i) = static_cast<double>(i);
+        std::cout << "Value of up1: ";
+        for (unsigned long i = 0;i < 10; i++) std::cout << *(up1.operator->()+i) << " ";
+        std::cout << endl << endl;
 
+        {   // Create scope to check move-assign
+            UniquePtr<double[]> up2(new double[10]);
+            for (unsigned long i = 0;i < 10; i++) *(up2.operator->()+i) = static_cast<double>(i);
+            std::cout << "Value of up2: ";
+            for (unsigned long i = 0;i < 10; i++) std::cout << *(up2.operator->()+i) << " ";
+            std::cout << endl << endl;
+            up1 = std::move(up2);
+        }
+        std::cout << "Value of up1 after move: " ;
+        for (unsigned long i = 0;i < 10; i++) std::cout << *(up1.operator->()+i) << " ";
+        std::cout << endl << endl;
+        UniquePtr<double[]> up2 = checkMove(std::move(up1));
+        std::cout << "Value of up1 after check move: " ;
+        for (unsigned long i = 0;i < 10; i++) std::cout << *(up2.operator->()+i) << " ";
+        std::cout << endl << endl;
 
-    cout << "*** Test SharedPointer ***" << endl << endl;
+        std::cout << "*** Test SharedPointer ***" << endl << endl;
 
-    SharedPtr<int> sp1;
-    cout << "UseCount of sp1: " << sp1.useCount() << endl << endl;
+        SharedPtr<int[]> sp1;
+        std::cout << "UseCount of sp1: " << sp1.useCount() << endl << endl;
 
-    SharedPtr<int> sp2(new int(42));
-    cout << "UseCount of sp2: " << sp2.useCount() << endl;
-    cout << "Value of sp2 is: " << *sp2 << endl << endl;
+        SharedPtr<int[]> sp2(new int[10]);
+        for (unsigned long i = 0;i < 10; i++) *(sp2.operator->()+i) = static_cast<int>(i);
+        std::cout << "UseCount of sp2: " << sp2.useCount() << endl;
+        std::cout << "Value of sp2 is: ";
+        for (unsigned long i = 0;i < 10; i++) std::cout << *(sp2.operator->()+i) << " ";
+        std::cout << endl << endl;
 
-    {  // Create scope to check copy constructor
-        SharedPtr<int> sp3(sp2);
-        cout << "UseCount after copy: sp2: " << sp2.useCount() << " sp3: " << sp3.useCount() << endl;
-        cout << "Values after copy: sp2: " << *sp2 << " sp3: " << *sp3 << endl << endl;
+        {  // Create scope to check copy constructor
+            SharedPtr<int[]> sp3(sp2);
+            std::cout << "UseCount after copy: sp2: " << sp2.useCount() << " sp3: " << sp3.useCount() << endl;
+            std::cout << "Values after copy: sp2: " ;
+            for (unsigned long i = 0;i < 10; i++) std::cout << *(sp2.operator->()+i) << " ";
+            std::cout << " sp3: ";
+            for (unsigned long i = 0;i < 10; i++) std::cout << *(sp3.operator->()+i) << " ";
+            std::cout << endl << endl;
+
+        }
+        std::cout << "UseCount of sp2: " << sp2.useCount() << endl << endl;
+
+        {   // Create scope to check assignment operator call
+            sp1 = sp2;
+            std::cout << "UseCount after copy assign: sp2: " << sp2.useCount() << " sp1: " << sp1.useCount() << endl;
+            std::cout << "Values after copy assign: sp2: " ;
+            for (unsigned long i = 0;i < 10; i++) std::cout << *(sp2.operator->()+i) << " ";
+            std::cout << " sp3: ";
+            for (unsigned long i = 0;i < 10; i++) std::cout << *(sp1.operator->()+i) << " ";
+            std::cout << endl << endl;
+        }
+
+        sp1.reset();
+        sp2.reset();
+        std::cout << "UseCount of sp1: " << sp2.useCount() << endl;
+        std::cout << "UseCount of sp2: " << sp2.useCount() << endl;
 
     }
-    cout << "UseCount of sp2: " << sp2.useCount() << endl << endl;
-
-    {   // Create scope to check assignment operator call
-        sp1 = sp2;
-        cout << "UseCount after copy assign: sp2: " << sp2.useCount() << " sp1: " << sp1.useCount() << endl;
-        cout << "Values after copy assign: sp2: " << *sp2 << " sp1: " << *sp1 << endl << endl;
-    }
-
-    // Reset
-    sp1.reset();
-    sp2.reset();
-    cout << "use_count of sp1: " << sp2.useCount() << endl;
-    cout << "use_count of sp2: " << sp2.useCount() << endl;
-
     return 0;
 }
