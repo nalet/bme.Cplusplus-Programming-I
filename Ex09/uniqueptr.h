@@ -40,7 +40,19 @@ public:
     void operator= (UniquePtr &move_ptrp) = delete;
     T1& operator= ( UniquePtr &&move_ptr)
     {
-        return UniquePtr(move_ptr);
+        // check if possible ptr is null...
+                if (move_ptr.mPtr != nullptr)
+                {
+                      mPtr = move_ptr.mPtr;
+                      // set old pointer to null ptr
+                     move_ptr.mPtr = nullptr;
+                }
+                else
+                {
+                    std::cout<<"no move today..."<<std::endl;
+                }
+
+                return *this->mPtr;
     }
 };
 
@@ -81,7 +93,19 @@ public:
     void operator= (UniquePtr &move_ptrp) = delete;
     T1& operator= ( UniquePtr &&move_ptr)
     {
-        return UniquePtr(move_ptr);
+        // check if possible ptr is null...
+                if (move_ptr.mPtr != nullptr)
+                {
+                      mPtr = move_ptr.mPtr;
+                      // set old pointer to null ptr
+                     move_ptr.mPtr = nullptr;
+                }
+                else
+                {
+                    std::cout<<"no move today..."<<std::endl;
+                }
+
+                return *this->mPtr;
     }
 };
 
