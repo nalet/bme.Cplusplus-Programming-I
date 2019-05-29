@@ -483,3 +483,147 @@
 	Stack on Pos 7: 7
 	Stack on Pos 8: 8
 	Stack on Pos 9: 0
+
+## Output Ex8_2 ##
+	///////////////////////////////////////////////////////////////
+	///               BME - C++ I - EXERCISE 8                  ///
+	///////////////////////////////////////////////////////////////
+
+	-----------------------stack string test-----------------------
+	Add to stack: ABC
+	Add to stack: BCD
+	Add to stack: CDE
+	Add to stack: DEF
+	Add to stack: EFG
+	Add to stack: FGH
+	Add to stack: GHI
+	Add to stack: HIJ
+	Add to stack: IJK
+	Add to stack: JKL
+	Peek from stack: JKL
+	Pop from stack: JKL
+	Peek from stack: IJK
+	Stack on Pos 0: ABC
+	Stack on Pos 1: BCD
+	Stack on Pos 2: CDE
+	Stack on Pos 3: DEF
+	Stack on Pos 4: EFG
+	Stack on Pos 5: FGH
+	Stack on Pos 6: GHI
+	Stack on Pos 7: HIJ
+	Stack on Pos 8: IJK
+	Stack on Pos 9:
+
+	------------------------stack int test--------------------------
+	Stack size is 0
+	Add to stack: 0
+	Add to stack: 1
+	Add to stack: 2
+	Add to stack: 3
+	Add to stack: 4
+	Add to stack: 5
+	Add to stack: 6
+	Add to stack: 7
+	Add to stack: 8
+	Add to stack: 9
+	Stack is full.
+	Peek from stack: 9
+	Pop from stack: 9
+	Peek from stack: 8
+	Stack on Pos 0: 0
+	Stack on Pos 1: 1
+	Stack on Pos 2: 2
+	Stack on Pos 3: 3
+	Stack on Pos 4: 4
+	Stack on Pos 5: 5
+	Stack on Pos 6: 6
+	Stack on Pos 7: 7
+	Stack on Pos 8: 8
+	Stack on Pos 9: 0
+
+	------------------------stack double test-----------------------
+	Add to stack: 0
+	Add to stack: 1
+	Add to stack: 2
+	Add to stack: 3
+	Add to stack: 4
+	Add to stack: 5
+	Add to stack: 6
+	Add to stack: 7
+	Add to stack: 8
+	Add to stack: 9
+	Peek from stack: 9
+	Pop from stack: 9
+	Peek from stack: 8
+	Stack on Pos 0: 0
+	Stack on Pos 1: 1
+	Stack on Pos 2: 2
+	Stack on Pos 3: 3
+	Stack on Pos 4: 4
+	Stack on Pos 5: 5
+	Stack on Pos 6: 6
+	Stack on Pos 7: 7
+	Stack on Pos 8: 8
+	Stack on Pos 9: 0
+
+## Output Ex9 ##
+	///////////////////////////////////////////////////////////////
+	///               BME - C++ I - EXERCISE 9                  ///
+	///////////////////////////////////////////////////////////////
+
+	-------------------------with variables------------------------
+	*** Test Unique Pointer ***
+
+	Value of up1: 3.1415
+
+	Value of up2: 23
+
+	Value of up1 after move: 23
+
+	Value of up1 after check move: 24
+
+	*** Test SharedPointer ***
+
+	UseCount of sp1: 0
+
+	UseCount of sp2: 0
+	Value of sp2 is: 42
+
+	UseCount after copy: sp2: 1 sp3: 1
+	Values after copy: sp2: 42 sp3: 42
+
+	UseCount of sp2: 1
+
+	UseCount after copy assign: sp2: 2 sp1: 2
+	Values after copy assign: sp2: 0 sp1: 0
+
+	UseCount of sp1: 0
+	UseCount of sp2: 0
+	-------------------------with arrays---------------------------
+	*** Test Unique Pointer ***
+
+	Value of up1: 0 1 2 3 4 5 6 7 8 9
+
+	Value of up2: 0 1 2 3 4 5 6 7 8 9
+
+	Value of up1 after move: 0 1 2 3 4 5 6 7 8 9
+
+	Value of up1 after check move: 1 1 2 3 4 5 6 7 8 9
+
+	*** Test SharedPointer ***
+
+	UseCount of sp1: 0
+
+	UseCount of sp2: 0
+	Value of sp2 is: 0 1 2 3 4 5 6 7 8 9
+
+	UseCount after copy: sp2: 1 sp3: 1
+	Values after copy: sp2: 0 1 2 3 4 5 6 7 8 9  sp3: 0 1 2 3 4 5 6 7 8 9
+
+	UseCount of sp2: 1
+
+	UseCount after copy assign: sp2: 2 sp1: 2
+	Values after copy assign: sp2: 0 0 2 3 4 5 6 7 8 9  sp3: 0 0 2 3 4 5 6 7 8 9
+
+	UseCount of sp1: 0
+	UseCount of sp2: 0
